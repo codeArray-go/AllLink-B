@@ -25,7 +25,9 @@ verifyOtp.post("/send-otp", async (req, res) => {
       from: "AllLink <hello@resend.io>", // You can replace with your verified domain
       to: email,
       subject: "Verify your Email",
-      text: `Your OTP is: ${otp} (valid for 5 minutes). Don’t share it with anyone.`,
+      text: `Your OTP is: ${otp} (valid for 5 minutes). Don’t share it.`,
+      html: `<p>Your OTP is: <strong>${otp}</strong> (valid for 5 minutes). Don’t share it.</p>`,
+});
     });
 
     return res
