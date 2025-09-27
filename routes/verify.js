@@ -25,7 +25,30 @@ verifyOtp.post("/send-otp", async (req, res) => {
       from: "Resend <otpsend@resend.dev>",
       to: email,
       subject: "Verify your Email",
-      html: `<p>Your otp is ${otp} </p>`
+      html: `
+                <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Verify Your Email</title>
+      <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f7; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 50px auto; background-color: #fff; border-radius: 10px; padding: 30px; text-align: center; }
+        .otp { font-size: 32px; font-weight: bold; color: #1a73e8; letter-spacing: 5px; margin: 20px 0; }
+        .footer { font-size: 12px; color: #999; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Verify Your Email</h1>
+        <p>Use the following OTP to complete your verification:</p>
+        <div class="otp">${otp}</div>
+        <p class="footer">This OTP is valid for 5 minutes. If you didn't request this, please ignore this email.</p>
+      </div>
+    </body>
+    </html>
+      `
     });
 
     return res
