@@ -25,7 +25,7 @@ verifyOtp.post("/send-otp", async (req, res) => {
       from: "AllLink <hello@resend.io>", // You can replace with your verified domain
       to: email,
       subject: "Verify your Email",
-      text: `
+      html: `
         <body style="margin: 0 !important; padding: 0 !important; background-color: #f7f7f7;">
 
     <!-- Main Table -->
