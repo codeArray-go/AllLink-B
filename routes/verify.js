@@ -6,7 +6,7 @@ const verifyOtp = express.Router();
 // Email transporter
 const transporter = nodemailer.createTransport({
     host: "smtp.office365.com",
-    port: 587,
+    port: 465,
     secure: true,
     auth: {
         user: process.env.EMAIL_USER,
