@@ -24,7 +24,7 @@ app.locals.redis = redisClient;
 console.log("connected to Redis Successfully");
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://all-link-f.vercel.app",
   methods: "*",
   credentials: true
 }));
