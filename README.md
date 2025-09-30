@@ -2,6 +2,14 @@
 
 This is the backend of **AllLinks**, a LinkTree-style project built with Node.js, Express, MongoDB, and Redis. It provides user authentication, OTP verification via email, and profile management.
 
+## ⚠️ Important Notes
+- Render blocks SMTP requests → OTP won’t work there.  
+- Use a VPS + email API (e.g., Resend) for production.  
+- Always use an **App Password** for `EMAIL_PASS`, never your real password.  
+- Keep `.env` private.
+---
+
+
 **To use this project**, first clone the repository and install dependencies with:  
 
 1. Clone repo:
