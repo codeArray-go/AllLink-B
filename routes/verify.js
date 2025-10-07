@@ -22,7 +22,7 @@ verifyOtp.post("/send-otp", async (req, res) => {
 
     // Send email with Resend
     await resend.emails.send({
-      from: "Resend <otpsend@resend.dev>",
+      from: "otpalllinks.linphasetechnology.com",
       to: email,
       subject: "Verify your Email",
       html: `
