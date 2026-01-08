@@ -27,7 +27,7 @@ app.use(cors({
   origin: [
   "https://all-links-f.vercel.app",
   "http://localhost:3000",
-]
+],
   methods: "*",
   credentials: true
 }));
